@@ -1,0 +1,94 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: system-ui, sans-serif;
+}
+
+body {
+    background: #0e0e11;
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+.topbar {
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1f1f1f;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.content {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+h1 { font-size: 32px; margin-bottom: 20px; color: #fff; }
+h2 { margin-top: 40px; margin-bottom: 15px; color: #4fc1ff; }
+p { margin-bottom: 20px; }
+
+/* TABELA KOMEND */
+.cmd-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #16161a;
+}
+
+.cmd-table th, .cmd-table td {
+    border: 1px solid #2d2d30;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+.cmd-table th {
+    background: #1f1f23;
+    color: #fff;
+}
+.cmd-table tr:nth-child(even) { background-color: #1d1d1e; }
+.cmd-table th:nth-child(1) { width: 15%; } /* Komenda */
+.cmd-table th:nth-child(2) { width: 20%; } /* Argumenty */
+.cmd-table th:nth-child(3) { width: 25%; } /* Przykład */
+.cmd-table th:nth-child(4) { width: 40%; } /* Opis */
+
+.cmd-table tr:hover {
+    background-color: #232329;
+    transition: 0.2s;
+}
+
+/* LISTA PREPROCESORÓW */
+.pre-list {
+    list-style: none;
+}
+
+.pre-list li {
+    background: #1f1f1f;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 4px solid #4fc1ff;
+    border-radius: 0 6px 6px 0;
+}
+
+code {
+    background: #2d2d30;
+    color: #219609;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+}

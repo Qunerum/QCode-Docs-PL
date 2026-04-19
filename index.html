@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dokumentacja QCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">Dokumentacja QCode</div>
+    </header>
+
+    <div class="layout">
+        <main class="content">
+            <h1>Dokumentacja QCode</h1>
+            <p>Spis podstawowych komend oraz dostępnych makr preprocesora.</p>
+
+            <h2>1. Podstawowe Komendy</h2>
+            <table class="cmd-table">
+                <thead>
+                    <tr>
+                        <th>Komenda</th>
+                        <th>Argumenty</th>
+                        <th>Przykład</th>
+                        <th>Opis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>int</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>int i 10</code></td>
+                        <td>Tworzy nową zmienną [x] typu INT o wartości [y].</td>
+                    </tr>
+                    <tr>
+                        <td><code>float</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>float f 3.1415</code></td>
+                        <td>Tworzy nową zmienną [x] typu FLOAT o wartości [y].</td>
+                    </tr>
+                    <tr>
+                        <td><code>string</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>string s Hello, world!</code></td>
+                        <td>Tworzy nową zmienną [x] typu STRING o treści [y].</td>
+                    </tr>
+                    <tr>
+                        <td><code>rem</code></td>
+                        <td>[x]</td>
+                        <td><code>rem x</code></td>
+                        <td>Usuwa zmienną [x] z pamięci.</td>
+                    </tr>
+                    <tr>
+                        <td><code>set</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>set x 10</code></td>
+                        <td>Ustawia wartość zmiennej [x] na [y].</td>
+                    </tr>
+
+                    <tr>
+                        <td><code>add</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>add s Siema!</code></td>
+                        <td>Dodaje [y] do [x]. Dla liczb to suma, dla STRING to dopisanie tekstu.</td>
+                    </tr>
+                    <tr>
+                        <td><code>sub</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>sub x 5</code></td>
+                        <td>Usuwa [y] od zmiennej [x]. (INT , FLOAT)</td>
+                    </tr>
+                    <tr>
+                        <td><code>mul</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>mul x 2</code></td>
+                        <td>Mnoży wartość zmiennej [x] przez [y]. (INT , FLOAT)</td>
+                    </tr>
+                    <tr>
+                        <td><code>div</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>div x 3</code></td>
+                        <td>Dzieli wartość zmiennej [x] przez [y]. (INT , FLOAT)</td>
+                    </tr>
+
+                    <tr>
+                        <td><code>list</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>list int l</code></td>
+                        <td>Tworzy listę [y] o typie [x]. (przechowuje tylko wartości typu [x])</td>
+                    </tr>
+                    <tr>
+                        <td><code>addl</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>addl l 10</code></td>
+                        <td>Dodaje [y] do listy [x].</td>
+                    </tr>
+                    <tr>
+                        <td><code>setl</code></td>
+                        <td>[x] [y] [z]</td>
+                        <td><code>setl l 2 50</code></td>
+                        <td>Ustawia wartość [z] na liście [x] pod indeksem [y].</td>
+                    </tr>
+                    <tr>
+                        <td><code>reml</code></td>
+                        <td>[x]</td>
+                        <td><code>reml l</code></td>
+                        <td>Usuwa całą listę [x] z pamięci.</td>
+                    </tr>
+                    <tr>
+                        <td><code>remli</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>remli l 0</code></td>
+                        <td>Czyści na liście [x] element o indeksie [y].</td>
+                    </tr>
+
+                    <tr>
+                        <td><code>run</code></td>
+                        <td>[x]</td>
+                        <td><code>run fn</code></td>
+                        <td>Wykonuje funkcję o nazwie [x].</td>
+                    </tr>
+                    <tr>
+                        <td><code>if</code></td>
+                        <td>[x] [y] [z] [a]</td>
+                        <td><code>if a == b fn</code></td>
+                        <td>Wykonuje funkcję o nazwie [a] jeżeli warunek podany w [x][y][z] jest spełniony.</td>
+                    </tr>
+                    <tr>
+                        <td><code>for</code></td>
+                        <td>[x] [y]</td>
+                        <td><code>for 10 fn</code></td>
+                        <td>Wykonuje funkcję o nazwie [y] przez [x] razy.</td>
+                    </tr>
+
+                    <tr>
+                        <td><code>print</code></td>
+                        <td>[x]</td>
+                        <td><code>print Hello, world!</code></td>
+                        <td>Wypisuje [x] bez nowej linii.</td>
+                    </tr>
+                    <tr>
+                        <td><code>println</code></td>
+                        <td>[x]</td>
+                        <td><code>println Hello, world!</code></td>
+                        <td>Wypisuje tekst [x] i przechodzi do nowej linii.</td>
+                    </tr>
+
+                    <tr>
+                        <td><code>input</code></td>
+                        <td>[x]</td>
+                        <td><code>input s</code></td>
+                        <td>Ustawia wartość zmiennej [x] na podany tekst przez użytkownika.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>2. Preprocesory</h2>
+            <p>Preprocesory działają przed wykonaniem komendy, zamieniając wzorce na wartości z pamięci.</p>
+            <ul class="pre-list">
+                <li><strong><code>v(x)</code></strong> – Zwraca wartość zmiennej <code>x</code>.</li>
+                <li><strong><code>t(x)</code></strong> – Zwraca typ zmiennej <code>x</code>. ( int , float , string )</li>
+                <li><strong><code>l(x)</code></strong> – Zwraca liczbę elementów w liście <code>x</code>.</li>
+                <li><strong><code>g(x i)</code></strong> – Zwraca element z listy <code>x</code> pod indeksem <code>i</code>. (musi to być liczba, np. 0, <code>v(i)</code> nie zadziała)</li>
+                <li><strong><code>gv(x y)</code></strong> – Zwraca element z listy <code>x</code> używając wartości zmiennej <code>y</code> jako indeksu.</li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
