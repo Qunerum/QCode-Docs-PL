@@ -15,7 +15,21 @@
             <h1>Dokumentacja QCode</h1>
             <p>Spis podstawowych komend oraz dostępnych makr preprocesora.</p>
 
-            <h2>1. Podstawowe Komendy</h2>
+            <h2>1. Tworzenie Funkcji</h2>
+            <p>Funkcje w QCode pozwalają na grupowanie komend:</p>
+
+            <div class="code-block">
+            <pre><code><span class="code-keyword">func</span> nazwa_funkcji
+    <span class="code-cmd">print</span> Hello,
+    <span class="code-cmd">println</span>  World!
+<span class="code-keyword">end</span></code></pre>
+            </div>
+
+            <p>Wyjście z powyższego kodu to będzie: <code>Hello, World!</code>.</p>
+            <p>Aby uruchomić zapisaną funkcję, użyj komendy <code>run</code>:</p>
+            <code>run nazwa_funkcji</code>
+
+            <h2>2. Podstawowe Komendy</h2>
             <table class="cmd-table">
                 <thead>
                     <tr>
@@ -154,7 +168,7 @@
                 </tbody>
             </table>
 
-            <h2>2. Preprocesory</h2>
+            <h2>3. Preprocesory</h2>
             <p>Preprocesory działają przed wykonaniem komendy, zamieniając wzorce na wartości z pamięci.</p>
             <ul class="pre-list">
                 <li><strong><code>v(x)</code></strong> – Zwraca wartość zmiennej <code>x</code>.</li>

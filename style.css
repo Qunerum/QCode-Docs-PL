@@ -43,6 +43,35 @@ h1 { font-size: 32px; margin-bottom: 20px; color: #fff; }
 h2 { margin-top: 40px; margin-bottom: 15px; color: #4fc1ff; }
 p { margin-bottom: 20px; }
 
+/* Kontener na blok kodu (to szare pole) */
+.code-block {
+    background: #16161a !important; /* Ciemne tło pola */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4fc1ff; /* Niebieski pasek z boku */
+    margin: 20px 0;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Usuwamy tło z samego tekstu wewnątrz bloku, żeby nie było pasków */
+.code-block code {
+    background: transparent !important;
+    padding: 0 !important;
+    color: #d4d4d4; /* Kolor zwykłego tekstu w kodzie */
+    border: none !important;
+}
+
+/* Styl dla słowa 'func' i 'end' wewnątrz bloku */
+.code-keyword {
+    color: #4fc1ff;
+    font-weight: bold;
+}
+
+/* Styl dla komend typu print/println wewnątrz bloku */
+.code-cmd {
+    color: #ce9178; /* Taki pomarańczowy/ceglany jak w VS Code */
+}
+
 /* TABELA KOMEND */
 .cmd-table {
     width: 100%;
