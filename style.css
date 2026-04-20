@@ -82,13 +82,14 @@ p { margin-bottom: 20px; }
     background: #1f1f23;
     color: #ccc;
     position: sticky;
-    top: 60px; /* Wysokość Twojego topbaru */
+    top: 60px;
     z-index: 10;
     border-bottom: 1px solid #666;
 }
 .cmd-table tr:nth-child(even) { background-color: #1d1d1e; }
 .cmd-table th:nth-child(1) { width: 15%; }
 .cmd-table th:nth-child(2) { width: 20%; }
+.cmd-table td:nth-child(2) { white-space: nowrap; }
 .cmd-table th:nth-child(3) { width: 25%; }
 .cmd-table th:nth-child(4) { width: 40%; }
 
@@ -110,6 +111,53 @@ code {
     padding: 2px 6px;
     border-radius: 4px;
     font-family: Consolas, monospace;
+}
+
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: #1f1f23;
+    color: #4fc1ff;
+    border: 1px solid #4fc1ff;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+[data-tooltip]::after {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #4fc1ff transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 125%;
 }
 
 .pre-list { list-style: none; }
