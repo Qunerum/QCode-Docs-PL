@@ -16,18 +16,24 @@
             <p>Spis podstawowych komend oraz dostępnych makr preprocesora.</p>
 
             <h2>1. Tworzenie Funkcji</h2>
-            <p>Funkcje w QCode pozwalają na grupowanie komend:</p>
+            <p>Funkcje w QCode pozwalają na grupowanie komend. <strong>Ważna zasada dotycząca zmiennych:</strong></p>
 
             <div class="code-block">
-            <pre><code><span class="code-keyword">func</span> nazwa_funkcji
-    <span class="code-cmd">print</span> Hello,
-    <span class="code-cmd">println</span>  World!
-<span class="code-keyword">end</span></code></pre>
-            </div>
+                <pre><code><span class="code-keyword">func</span> pokaz_x
+    <span class="code-cmd">println</span> Aktualny x: v(x)
+<span class="code-keyword">end</span>
 
-            <p>Wyjście z powyższego kodu to będzie: <code>Hello, World!</code>.</p>
-            <p>Aby uruchomić zapisaną funkcję, użyj komendy <code>run</code>:</p>
-            <code>run nazwa_funkcji</code>
+<span class="code-cmd">int</span> x 10
+<span class="code-cmd">run</span> pokaz_x
+<span class="code-com">] Wypisze: Aktualny x: 10</span>
+
+<span class="code-cmd">set</span> x 20
+<span class="code-cmd">run</span> pokaz_x
+<span class="code-com">] Wypisze: Aktualny x: 20</span></code></pre></div>
+
+    <blockquote>
+        <strong>Uwaga:</strong> Aby funkcja zawsze korzystała z <strong>aktualnej</strong> wartości zmiennej, zmienna musi być zadeklarowana <strong>PO</strong> definicji funkcji. Jeśli zadeklarujesz zmienną przed funkcją, jej wartość wewnątrz funkcji zostanie "zamrożona" na stanie z momentu tworzenia funkcji.
+    </blockquote>
 
             <h2>2. Podstawowe Komendy</h2>
             <table class="cmd-table">
@@ -94,6 +100,12 @@
                         <td data-tooltip="[zmienna] [liczba]">[x] [y]</td>
                         <td><code>div x 3</code></td>
                         <td>Dzieli wartość zmiennej <code>[x]</code> przez <code>[y]</code>. (INT , FLOAT)</td>
+                    </tr>
+                    <tr>
+                        <td><code>mod</code></td>
+                        <td data-tooltip="[liczba całkowita] [liczba całkowita] [zmienna]">[x] [y] [z]</td>
+                        <td><code>mod 10 3 x</code></td>
+                        <td>Oblicza resztę z dzielenia <code>[x]</code> przez <code>[y]</code> i zapisuje wynik w zmiennej <code>[z]</code>.</td>
                     </tr>
 
                     <tr>
@@ -172,8 +184,14 @@
                 </tr>
                 </tbody>
             </table>
-
-            <h2>3. Preprocesory</h2>
+            <h2>3. Komentarze</h2>
+            <p>Komentarze w QCode muszą znajdować się w <strong>osobnej linii</strong>. Każda linia zaczynająca się od znaku <code>]</code> jest ignorowana przez interpreter.</p>
+            <div class="code-block">
+            <pre><code><span class="code-com">] To jest poprawny komentarz</span>
+<span class="code-cmd">add</span> x 10
+<span class="code-cmd">add</span> x 1 <span class="code-com">] To wygeneruje </span><span class="code-err">BŁĄD</span></code></pre>
+            </div>
+            <h2>4. Preprocesory</h2>
             <p>Preprocesory działają przed wykonaniem komendy, zamieniając wzorce na wartości z pamięci.</p>
             <ul class="pre-list">
                 <li data-tooltip="Przykład: 'println v(x)' | Wyjście: '10'"><code>v(x)</code> – Zwraca wartość zmiennej <code>x</code>.</li>

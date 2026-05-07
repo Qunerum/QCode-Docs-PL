@@ -59,11 +59,11 @@ p { margin-bottom: 20px; }
     border: none !important;
 }
 
-.code-keyword {
-    color: #4fc1ff;
-    font-weight: bold;
-}
+.code-keyword { color: #4fc1ff; font-weight: bold; }
 .code-cmd { color: #ce9178; }
+.code-com { color: #00ab11; }
+.code-err { color: #750002; font-weight: bold; }
+
 
 .cmd-table {
     width: 100%;
