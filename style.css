@@ -87,6 +87,32 @@ p { margin-bottom: 20px; }
     border-bottom: 1px solid #666;
 }
 .cmd-table tr:nth-child(even) { background-color: #1d1d1e; }
+
+.cmd-table tr.cmd {
+    background: linear-gradient(to right, #a69003 -20%, transparent 10%);
+    border-right: 4px solid var(--color-keyword);
+}
+.cmd-table tr.cmdC {
+    background: linear-gradient(to right, #e66700 -20%, transparent 10%);
+    border-right: 4px solid var(--color-keyword);
+}
+.cmd-table tr.cmdT {
+    background: linear-gradient(to right, #007ee6 -20%, transparent 10%);
+    border-right: 4px solid var(--color-keyword);
+}
+.cmd-table tr.cmdL {
+    background: linear-gradient(to right, #c20081 -20%, transparent 10%);
+    border-right: 4px solid var(--color-keyword);
+}
+.cmd-table tr.var {
+    background: linear-gradient(to right, #5347a1 -20%, transparent 10%);
+    border-right: 4px solid var(--color-keyword);
+}
+.cmd-table tr.math {
+    background: linear-gradient(to right, #1f7d05 -20%, transparent 10%);
+    border-right: 4px solid var(--color-keyword);
+}
+
 .cmd-table th:nth-child(1) { width: 15%; }
 .cmd-table th:nth-child(2) { width: 20%; }
 .cmd-table td:nth-child(2) { white-space: nowrap; }

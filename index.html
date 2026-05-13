@@ -46,150 +46,149 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>int</code></td>
+                    <tr class="var">
+                        <td data-tooltip="Zmienna"><code>int</code></td>
                         <td data-tooltip="[nazwa] [liczba całkowita]">[x] [y]</td>
                         <td><code>int i 10</code></td>
                         <td>Tworzy nową zmienną <code>[x]</code> typu INT o wartości <code>[y]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>float</code></td>
+                    <tr class="var">
+                        <td data-tooltip="Zmienna"><code>float</code></td>
                         <td data-tooltip="[nazwa] [liczba]">[x] [y]</td>
                         <td><code>float f 3.1415</code></td>
                         <td>Tworzy nową zmienną <code>[x]</code> typu FLOAT o wartości <code>[y]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>string</code></td>
+                    <tr class="var">
+                        <td data-tooltip="Zmienna"><code>string</code></td>
                         <td data-tooltip="[nazwa] [tekst]">[x] [y]</td>
                         <td><code>string s Hello, world!</code></td>
                         <td>Tworzy nową zmienną <code>[x]</code> typu STRING o treści <code>[y]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>rem</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>rem</code></td>
                         <td data-tooltip="[zmienna]">[x]</td>
                         <td><code>rem x</code></td>
                         <td>Usuwa zmienną <code>[x]</code> z pamięci.</td>
                     </tr>
-                    <tr>
-                        <td><code>set</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>set</code></td>
                         <td data-tooltip="[zmienna] [wartość]">[x] [y]</td>
                         <td><code>set x 10</code></td>
                         <td>Ustawia wartość zmiennej <code>[x]</code> na <code>[y]</code>.</td>
                     </tr>
 
-                    <tr>
-                        <td><code>add</code></td>
+                    <tr class="math">
+                        <td data-tooltip="Komenda matematyczna"><code>add</code></td>
                         <td data-tooltip="[zmienna] [wartość]">[x] [y]</td>
                         <td><code>add s Siema!</code></td>
                         <td>Dodaje <code>[y]</code> do <code>[x]</code>. Dla liczb to suma, dla STRING to dopisanie tekstu.</td>
                     </tr>
-                    <tr>
-                        <td><code>sub</code></td>
+                    <tr class="math">
+                        <td data-tooltip="Komenda matematyczna"><code>sub</code></td>
                         <td data-tooltip="[zmienna] [liczba]">[x] [y]</td>
                         <td><code>sub x 5</code></td>
                         <td>Usuwa <code>[y]</code> od zmiennej <code>[x]</code>. (INT , FLOAT)</td>
                     </tr>
-                    <tr>
-                        <td><code>mul</code></td>
+                    <tr class="math">
+                        <td data-tooltip="Komenda matematyczna"><code>mul</code></td>
                         <td data-tooltip="[zmienna] [liczba]">[x] [y]</td>
                         <td><code>mul x 2</code></td>
                         <td>Mnoży wartość zmiennej <code>[x]</code> przez <code>[y]</code>. (INT , FLOAT)</td>
                     </tr>
-                    <tr>
-                        <td><code>div</code></td>
+                    <tr class="math">
+                        <td><code data-tooltip="Komenda matematyczna">div</code></td>
                         <td data-tooltip="[zmienna] [liczba]">[x] [y]</td>
                         <td><code>div x 3</code></td>
                         <td>Dzieli wartość zmiennej <code>[x]</code> przez <code>[y]</code>. (INT , FLOAT)</td>
                     </tr>
-                    <tr>
-                        <td><code>mod</code></td>
+                    <tr class="math">
+                        <td data-tooltip="Komenda matematyczna"><code>mod</code></td>
                         <td data-tooltip="[liczba całkowita] [liczba całkowita] [zmienna]">[x] [y] [z]</td>
                         <td><code>mod 10 3 x</code></td>
                         <td>Oblicza resztę z dzielenia <code>[x]</code> przez <code>[y]</code> i zapisuje wynik w zmiennej <code>[z]</code>.</td>
                     </tr>
 
-                    <tr>
-                        <td><code>list</code></td>
+                    <tr class="var">
+                        <td data-tooltip="Zmienna"><code>list</code></td>
                         <td data-tooltip="[typ] [tekst]">[x] [y]</td>
                         <td><code>list int l</code></td>
                         <td>Tworzy listę <code>[y]</code> o typie <code>[x]</code>. (przechowuje tylko wartości typu <code>[x]</code>)</td>
                     </tr>
-                    <tr>
-                        <td><code>addl</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>addl</code></td>
                         <td data-tooltip="[lista] [wartość]">[x] [y]</td>
                         <td><code>addl l 10</code></td>
                         <td>Dodaje <code>[y]</code> do listy <code>[x]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>setl</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>setl</code></td>
                         <td data-tooltip="[lista] [liczba całkowita] [wartość]">[x] [y] [z]</td>
                         <td><code>setl l 2 50</code></td>
                         <td>Ustawia wartość <code>[z]</code> na liście <code>[x]</code> pod indeksem <code>[y]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>reml</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>reml</code></td>
                         <td data-tooltip="[lista]">[x]</td>
                         <td><code>reml l</code></td>
                         <td>Usuwa całą listę <code>[x]</code> z pamięci.</td>
                     </tr>
-                    <tr>
-                        <td><code>remli</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>remli</code></td>
                         <td data-tooltip="[lista] [liczba całkowita]">[x] [y]</td>
                         <td><code>remli l 0</code></td>
                         <td>Czyści na liście <code>[x]</code> element o indeksie <code>[y]</code>.</td>
                     </tr>
 
-                    <tr>
-                        <td><code>run</code></td>
+                    <tr class="cmd">
+                        <td data-tooltip="Komenda"><code>run</code></td>
                         <td data-tooltip="[funkcja]">[x]</td>
                         <td><code>run fn</code></td>
                         <td>Wykonuje funkcję o nazwie <code>[x]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>if</code></td>
+                    <tr class="cmdC">
+                        <td data-tooltip="Komenda warunkowa"><code>if</code></td>
                         <td data-tooltip="[wartość] [== != >= > < <=] [wartość] [funkcja]">[x] [y] [z] [a]</td>
                         <td><code>if a == b fn</code></td>
                         <td>Wykonuje funkcję o nazwie <code>[a]</code> jeżeli warunek podany w <code>[x][y][z]</code> jest spełniony.</td>
                     </tr>
-                    <tr>
-                        <td><code>ifel</code></td>
+                    <tr class="cmdC">
+                        <td data-tooltip="Komenda warunkowa"><code>ifel</code></td>
                         <td data-tooltip="[wartość] [== != >= > < <=] [wartość] [funkcja] [funkcja]">[x] [y] [z] [a] [b]</td>
                         <td><code>ifel a == b fn1 fn2</code></td>
                         <td>Wykonuje funkcję o nazwie <code>[a]</code> jeżeli warunek podany w <code>[x][y][z]</code> jest spełniony, w przeciwnym razie wykona funkcję <code>[b]</code>.</td>
                     </tr>
-                    <tr>
-                        <td><code>for</code></td>
+                    <tr class="cmdL">
+                        <td data-tooltip="Komenda powtarzająca"><code>for</code></td>
                         <td data-tooltip="[liczba całkowita] [funkcja]">[x] [y]</td>
                         <td><code>for 10 fn</code></td>
                         <td>Wykonuje funkcję o nazwie <code>[y]</code> przez <code>[x]</code> razy.</td>
                     </tr>
 
-                    <tr>
-                        <td><code>print</code></td>
+                    <tr class="cmdT">
+                        <td data-tooltip="Komenda konsoli"><code>print</code></td>
                         <td data-tooltip="[tekst]">[x]</td>
                         <td><code>print Hello, world!</code></td>
                         <td>Wypisuje <code>[x]</code> bez nowej linii.</td>
                     </tr>
-                    <tr>
-                        <td><code>println</code></td>
+                    <tr class="cmdT">
+                        <td data-tooltip="Komenda konsoli"><code>println</code></td>
                         <td data-tooltip="[tekst]">[x]</td>
                         <td><code>println Hello, world!</code></td>
                         <td>Wypisuje tekst <code>[x]</code> i przechodzi do nowej linii.</td>
                     </tr>
-                    <tr>
-                        <td><code>clear</code></td>
+                    <tr class="cmdT">
+                        <td data-tooltip="Komenda konsoli"><code>clear</code></td>
                         <td>brak</td>
                         <td><code>clear</code></td>
                         <td>Czyści okno konsoli/terminala (używa sekwencji ANSI).</td>
                     </tr>
-
-                    <tr>
-                        <td><code>input</code></td>
+                    <tr class="cmdT">
+                        <td data-tooltip="Komenda konsoli"><code>input</code></td>
                         <td data-tooltip="[zmienna]">[x]</td>
                         <td><code>input s</code></td>
                         <td>Ustawia wartość zmiennej <code>[x]</code> na podany tekst przez użytkownika.</td>
-                    </tr><tr>
-                    <td><code>split</code></td>
+                    </tr><tr class="cmd">
+                    <td data-tooltip="Komenda"><code>split</code></td>
                     <td data-tooltip="[zmienna] [znak] [zmienna] [zmienna]">[x] [y] [z] [a]</td>
                     <td><code>split s __ a b</code></td>
                     <td>Dzieli tekst <code>[x]</code> przez pierwszy napotkany znak <code>[y]</code>. Wynik przypisuje do zmiennych <code>[z]</code> i <code>[a]</code>. Użyj <code>__</code>, aby dzielić przez spację.</td>
